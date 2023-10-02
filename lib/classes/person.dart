@@ -1,64 +1,46 @@
 /* 
 * classe Person
 * Propriedades: as variáveis estabelecidas int classe 
-* Null Safety CHECK -> podemos iniciar a variável como String? permitindo que seja nula ou com valor "" (vazio, somente strings aceitam). Depende do caso.*/
+* Null Safety CHECK -> podemos iniciar a variável como String? permitindo que seja nula ou com valor "" (vazio, somente strings aceitam). Depende do caso.
+*/
 class Person {
   String _firstName =
-      ""; // <- em dart, variáveis iniciadas com _ são "privadas".
-  String _surName = "";
-  String _docType = "";
-  String _docNumber = "";
+      ""; // Encapsulamento <- em dart, variáveis iniciadas com _ são "privadas".
   String _phoneNumber = "";
-  List<PersonAddress>? address; // <- pode ser nulo
+  String _addressName = "";
+  String _addressNumber = "";
+  String _addressNeighbourhood = "";
+  String _addressZipCode = "";
 
-  //Setter
+  /* 
+  Construtor <- é o método como a classe é inicializada
+  a estrutura do construtor é:
+
+    NomeDaClasse(agrumentos){
+      inicialização da instância
+    }
+ 
+  Utilizando o construtor da classe, precisamos passar todos os parâmetros das instâncias obrigatórias.
+
+ */
+  Person(String nome, String telefone, String nomeRua, String numero,
+      String bairro, String cep) {
+    _firstName = nome;
+    _phoneNumber = telefone;
+    _addressName = nomeRua;
+    _addressNumber = numero;
+    _addressNeighbourhood = bairro;
+    _addressZipCode = cep;
+  }
+
+  //Setter, como as variáveis instanciáveis não existem fora do escopo da classe, é preciso criar um método para acessar.
   void setFirstName(String name) {
     _firstName = name;
-  }
-
-  void setSurName(String surName) {
-    _surName = surName;
-  }
-
-  void setDocType(String docType) {
-    _docType = docType;
-  }
-
-  void setDocNumber(String docNumber) {
-    _docNumber = docNumber;
   }
 
   void setPhoneNumber(String phone) {
     _phoneNumber = phone;
   }
-
-  //Getter
-  String getFirstName() {
-    return _firstName;
-  }
-
-  String getSurName() {
-    return _surName;
-  }
-
-  String getDocType() {
-    return _docType;
-  }
-
-  String getDocNumber() {
-    return _docNumber;
-  }
-
-  String getPhoneNumber() {
-    return _phoneNumber;
-  }
-}
-
-class PersonAddress {
-  String _addressName = "";
-  String _addressNumber = "";
-  String _addressNeighbourhood = "";
-  String _addressZipCode = "";
 
   void setAddressName(String addressName) {
     _addressName = addressName;
@@ -76,6 +58,15 @@ class PersonAddress {
     _addressZipCode = zipCode;
   }
 
+  //Getter, como as variáveis instanciáveis não existem fora do escopo da classe, é preciso criar um método para reeuperar o valor.
+  String getFirstName() {
+    return _firstName;
+  }
+
+  String getPhoneNumber() {
+    return _phoneNumber;
+  }
+
   String getAddressName() {
     return _addressName;
   }
@@ -90,5 +81,21 @@ class PersonAddress {
 
   String getAddressZipCode() {
     return _addressZipCode;
+  }
+
+  /*
+  Sobrescrita de método, é também um caso de polimorfismo, pois .toString() é um método da Objects e continua existindo como tal, porém o .toString() associado à Classe PersonAddress é diferente.
+  Criamos um método, que retorna um MAP, para que os valores das variáveis sejam recuperados, de uma única vez, já devidamente formatados. 
+   */
+  @override
+  String toString() {
+    return {
+      "Nome": _firstName,
+      "Telefone": _phoneNumber,
+      "Endereço": _addressName,
+      "Número": _addressNumber,
+      "Bairro": _addressNeighbourhood,
+      "CEP": _addressZipCode
+    }.toString();
   }
 }
