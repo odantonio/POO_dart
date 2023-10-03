@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
-enum TiposDocumentos { RG, CPF, CNH, CLT, CREA, CRP, CRM, CNPJ, Fornecer }
+enum TiposDocumentos { RG, CPF, CNH, CLT, CREA, CRP, CRM, Fornecer }
 
 enum Estados {
   AC,

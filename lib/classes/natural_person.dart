@@ -15,13 +15,13 @@ class NaturalPerson extends ModelPerson {
       String numero,
       String bairro,
       String cep,
-      TiposDocumentos tipoDoc,
+      TiposDocumentos tiposDocumentos,
       String numeroDoc,
       Estados estados,
       TipoNotificacao tipoNotificacao)
       : super(nome, telefone, nomeRua, numero, bairro, cep, estados,
             tipoNotificacao) {
-    _docType = tipoDoc;
+    _docType = tiposDocumentos;
     _docNumber = numeroDoc;
     _surName = sobrenome;
   }
@@ -33,8 +33,8 @@ class NaturalPerson extends ModelPerson {
     return _surName;
   }
 
-  void setDocType(TiposDocumentos docType) {
-    _docType = docType;
+  void setDocType(TiposDocumentos tiposDocumentos) {
+    _docType = tiposDocumentos;
   }
 
   void setDocNumber(String docNumber) {

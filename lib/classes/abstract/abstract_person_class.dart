@@ -16,7 +16,7 @@ abstract class ModelPerson {
   String _addressNeighbourhood = "";
   String _addressZipCode = "";
   Estados _state = Estados.Escolha;
-  TipoNotificacao _tipoNotificacao = TipoNotificacao.NENHUM;
+  TipoNotificacao _tipoNotificacao = TipoNotificacao.Nenhum;
 
   ModelPerson(
       String nome,
