@@ -18,15 +18,12 @@ abstract class ModelPerson {
   Estados _state = Estados.Escolha;
   TipoNotificacao _tipoNotificacao = TipoNotificacao.Nenhum;
 
-  ModelPerson(
-      String nome,
-      String telefone,
-      String nomeRua,
-      String numero,
-      String bairro,
-      String cep,
-      Estados estados,
-      TipoNotificacao tipoNotificacao) {
+  /* 
+  Alteração para tornar o parâmetro de notificação Opcional
+   */
+  ModelPerson(String nome, String telefone, String nomeRua, String numero,
+      String bairro, String cep, Estados estados,
+      {TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum}) {
     _firstName = nome;
     _phoneNumber = telefone;
     _addressName = nomeRua;

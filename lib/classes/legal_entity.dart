@@ -16,9 +16,9 @@ class LegalEntity extends ModelPerson {
       String cep,
       String numeroDoc,
       Estados estados,
-      TipoNotificacao tipoNotificacao)
+      {TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum})
       : super(nome, telefone, nomeRua, numero, bairro, cep, estados,
-            tipoNotificacao) {
+            tipoNotificacao: tipoNotificacao) {
     _razaoSocial = razaoSocial;
     _docNumber = numeroDoc;
   }

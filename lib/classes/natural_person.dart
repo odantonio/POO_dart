@@ -18,9 +18,9 @@ class NaturalPerson extends ModelPerson {
       TiposDocumentos tiposDocumentos,
       String numeroDoc,
       Estados estados,
-      TipoNotificacao tipoNotificacao)
+      {TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum})
       : super(nome, telefone, nomeRua, numero, bairro, cep, estados,
-            tipoNotificacao) {
+            tipoNotificacao: tipoNotificacao) {
     _docType = tiposDocumentos;
     _docNumber = numeroDoc;
     _surName = sobrenome;

@@ -14,7 +14,7 @@ void main(List<String> arguments) {
       "17.060-400",
       "028.173.066/0001-83",
       Estados.SP,
-      TipoNotificacao.EMAIL);
+      tipoNotificacao: TipoNotificacao.EMAIL);
   print(pa1);
   var p1 = NaturalPerson(
       "Olavo",
@@ -27,6 +27,6 @@ void main(List<String> arguments) {
       TiposDocumentos.RG,
       "28.173.066-0",
       Estados.SP,
-      TipoNotificacao.SMS);
+      tipoNotificacao: TipoNotificacao.SMS);
   print(p1);
 }
