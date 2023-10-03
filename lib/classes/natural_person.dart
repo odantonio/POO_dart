@@ -11,6 +11,7 @@ class NaturalPerson extends ModelPerson {
       String nome,
       String sobrenome,
       String telefone,
+      String email,
       String nomeRua,
       String numero,
       String bairro,
@@ -18,9 +19,10 @@ class NaturalPerson extends ModelPerson {
       TiposDocumentos tiposDocumentos,
       String numeroDoc,
       Estados estados,
-      {TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum})
-      : super(nome, telefone, nomeRua, numero, bairro, cep, estados,
-            tipoNotificacao: tipoNotificacao) {
+      {String token = "",
+      TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum})
+      : super(nome, telefone, email, nomeRua, numero, bairro, cep, estados,
+            token: token, tipoNotificacao: tipoNotificacao) {
     _docType = tiposDocumentos;
     _docNumber = numeroDoc;
     _surName = sobrenome;
@@ -57,6 +59,8 @@ class NaturalPerson extends ModelPerson {
       "Tipo de Documento": _docType,
       "Número do Documento": _docNumber,
       "Telefone": getPhoneNumber(),
+      "e-mail": getEmail(),
+      "Token PUSH Notification": getToken(),
       "Endereço": getAddressName(),
       "Número": getAddressNumber(),
       "Bairro": getAddressNeighbourhood(),

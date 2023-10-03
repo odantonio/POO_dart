@@ -1,0 +1,4 @@
+/* 
+Interfaces:
+ */
+class SendNofitication {}

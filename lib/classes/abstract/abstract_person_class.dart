@@ -11,6 +11,8 @@ import 'package:myapp_object_orientation/enums/notification_method.dart';
 abstract class ModelPerson {
   String _firstName = "";
   String _phoneNumber = "";
+  String _email = "";
+  String _token = "";
   String _addressName = "";
   String _addressNumber = "";
   String _addressNeighbourhood = "";
@@ -21,11 +23,13 @@ abstract class ModelPerson {
   /* 
   Alteração para tornar o parâmetro de notificação Opcional
    */
-  ModelPerson(String nome, String telefone, String nomeRua, String numero,
-      String bairro, String cep, Estados estados,
-      {TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum}) {
+  ModelPerson(String nome, String telefone, String email, String nomeRua,
+      String numero, String bairro, String cep, Estados estados,
+      {token = "", TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum}) {
     _firstName = nome;
     _phoneNumber = telefone;
+    _email = email;
+    _token = token;
     _addressName = nomeRua;
     _addressNumber = numero;
     _addressNeighbourhood = bairro;
@@ -40,6 +44,14 @@ abstract class ModelPerson {
 
   void setPhoneNumber(String phone) {
     _phoneNumber = phone;
+  }
+
+  void setEmail(String email) {
+    _email = email;
+  }
+
+  void setToken(String token) {
+    _token = token;
   }
 
   void setAddressName(String addressName) {
@@ -74,6 +86,14 @@ abstract class ModelPerson {
     return _phoneNumber;
   }
 
+  String getEmail() {
+    return _email;
+  }
+
+  String getToken() {
+    return _token;
+  }
+
   String getAddressName() {
     return _addressName;
   }
@@ -103,6 +123,8 @@ abstract class ModelPerson {
     return {
       "Nome": _firstName,
       "Telefone": _phoneNumber,
+      "e-mail": _email,
+      "token": _token,
       "Endereço": _addressName,
       "Número": _addressNumber,
       "Bairro": _addressNeighbourhood,

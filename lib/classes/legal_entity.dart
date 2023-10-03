@@ -10,15 +10,17 @@ class LegalEntity extends ModelPerson {
       String nome,
       String razaoSocial,
       String telefone,
+      String email,
       String nomeRua,
       String numero,
       String bairro,
       String cep,
       String numeroDoc,
       Estados estados,
-      {TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum})
-      : super(nome, telefone, nomeRua, numero, bairro, cep, estados,
-            tipoNotificacao: tipoNotificacao) {
+      {String token = "",
+      TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum})
+      : super(nome, telefone, email, nomeRua, numero, bairro, cep, estados,
+            token: token, tipoNotificacao: tipoNotificacao) {
     _razaoSocial = razaoSocial;
     _docNumber = numeroDoc;
   }
@@ -47,6 +49,8 @@ class LegalEntity extends ModelPerson {
       "Tipo de Documento": "CNPJ",
       "Número do Documento": _docNumber,
       "Telefone": getPhoneNumber(),
+      "Token PUSH Notification": getToken(),
+      "e-mail": getEmail(),
       "Endereço": getAddressName(),
       "Número": getAddressNumber(),
       "Bairro": getAddressNeighbourhood(),

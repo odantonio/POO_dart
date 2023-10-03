@@ -8,18 +8,21 @@ void main(List<String> arguments) {
       "obdaOutSorcing",
       "Empresa de Desenvolvimento de Software ME.",
       "(16) 9 9734-1107",
+      "obdaOutSorcing@obdaoutsourcing.com",
       "Rua Padre Anchieta",
       "19-44",
       "Vila Seabra",
       "17.060-400",
       "028.173.066/0001-83",
       Estados.SP,
+      token: "153432",
       tipoNotificacao: TipoNotificacao.EMAIL);
   print(pa1);
   var p1 = NaturalPerson(
       "Olavo",
       "D'Antonio",
       "(16) 9 9734-1107",
+      "odantonio@aol.com",
       "Rua Padre Anchieta",
       "19-44",
       "Vila Seabra",
