@@ -50,9 +50,13 @@ class LegalEntity extends ModelPerson {
       "Endereço": getAddressName(),
       "Número": getAddressNumber(),
       "Bairro": getAddressNeighbourhood(),
+<<<<<<< HEAD
       "CEP": getAddressZipCode(),
       "Estado": getState(),
       "Tipo de Notificação": getNotificationType()
+=======
+      "CEP": getAddressZipCode()
+>>>>>>> 45be59b69b6a666c3aee1d82f3aa130460259e07
     }.toString();
   }
 }
