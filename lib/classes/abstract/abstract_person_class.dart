@@ -18,14 +18,14 @@ abstract class ModelPerson {
   String _addressNeighbourhood = "";
   String _addressZipCode = "";
   Estados _state = Estados.Escolha;
-  TipoNotificacao _tipoNotificacao = TipoNotificacao.Nenhum;
+  TipoNotificacao _tipoNotificacao = TipoNotificacao.NENHUM;
 
   /* 
   Alteração para tornar o parâmetro de notificação Opcional
    */
   ModelPerson(String nome, String telefone, String email, String nomeRua,
       String numero, String bairro, String cep, Estados estados,
-      {token = "", TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum}) {
+      {token = "", TipoNotificacao tipoNotificacao = TipoNotificacao.NENHUM}) {
     _firstName = nome;
     _phoneNumber = telefone;
     _email = email;

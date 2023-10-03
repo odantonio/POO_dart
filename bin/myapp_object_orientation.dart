@@ -2,6 +2,7 @@ import 'package:myapp_object_orientation/classes/legal_entity.dart';
 import 'package:myapp_object_orientation/classes/natural_person.dart';
 import 'package:myapp_object_orientation/enums/enum_lists_docs_states.dart';
 import 'package:myapp_object_orientation/enums/notification_method.dart';
+import 'package:myapp_object_orientation/services/send_notification.dart';
 
 void main(List<String> arguments) {
   var pa1 = LegalEntity(
@@ -18,6 +19,7 @@ void main(List<String> arguments) {
       token: "153432",
       tipoNotificacao: TipoNotificacao.EMAIL);
   print(pa1);
+
   var p1 = NaturalPerson(
       "Olavo",
       "D'Antonio",
@@ -32,4 +34,7 @@ void main(List<String> arguments) {
       Estados.SP,
       tipoNotificacao: TipoNotificacao.SMS);
   print(p1);
+  SendingNotification enviar = SendingNotification();
+  enviar.notificar(p1);
+  enviar.notificar(pa1);
 }

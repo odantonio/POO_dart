@@ -20,7 +20,7 @@ class NaturalPerson extends ModelPerson {
       String numeroDoc,
       Estados estados,
       {String token = "",
-      TipoNotificacao tipoNotificacao = TipoNotificacao.Nenhum})
+      TipoNotificacao tipoNotificacao = TipoNotificacao.NENHUM})
       : super(nome, telefone, email, nomeRua, numero, bairro, cep, estados,
             token: token, tipoNotificacao: tipoNotificacao) {
     _docType = tiposDocumentos;
