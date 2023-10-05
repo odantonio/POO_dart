@@ -1,4 +1,4 @@
-import 'package:myapp_object_orientation/classes/abstract/abstract_person_class.dart';
+import 'package:myapp_object_orientation/classes/models/abstract_person_class.dart';
 import 'package:myapp_object_orientation/enums/enum_lists_docs_states.dart';
 import 'package:myapp_object_orientation/enums/notification_method.dart';
 
