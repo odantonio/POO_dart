@@ -2,7 +2,6 @@ import 'package:myapp_object_orientation/classes/legal_entity.dart';
 import 'package:myapp_object_orientation/classes/natural_person.dart';
 import 'package:myapp_object_orientation/enums/enum_lists_docs_states.dart';
 import 'package:myapp_object_orientation/enums/notification_method.dart';
-import 'package:myapp_object_orientation/exceptions/person_exception.dart';
 import 'package:myapp_object_orientation/services/send_notification.dart';
 
 void main(List<String> arguments) {
