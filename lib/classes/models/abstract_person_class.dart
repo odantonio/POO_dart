@@ -1,13 +1,13 @@
-/* 
-Neste arquivo foi implementada a classe abstrata Person.
-
-As classes abstratas são as que não permitem realizar qualquer tipo de instância. São classes feitas especialmente para serem modelos para suas classes derivadas. As classes derivadas, deverão sobrescrever os métodos para realizar a implementação dos mesmos. As classes derivadas das classes abstratas são conhecidas como classes concretas. 
-Os métodos abstratos estão presentes somente em classes abstratas, e são aqueles que não possuem implementação.
- */
-
 import 'package:myapp_object_orientation/enums/enum_lists_docs_states.dart';
 import 'package:myapp_object_orientation/enums/notification_method.dart';
 
+// Neste arquivo foi implementada a classe abstrata Person.
+//
+// As classes abstratas são as que não permitem realizar qualquer tipo de instância.
+// São classes feitas especialmente para serem modelos para suas classes derivadas.
+//As classes derivadas, deverão sobrescrever os métodos para realizar a implementação dos mesmos.
+//As classes derivadas das classes abstratas são conhecidas como classes concretas.
+// Os métodos abstratos estão presentes somente em classes abstratas, e são aqueles que não possuem implementação.
 abstract class ModelPerson {
   String _firstName = "";
   String _phoneNumber = "";
@@ -20,9 +20,7 @@ abstract class ModelPerson {
   Estados _state = Estados.Escolha;
   TipoNotificacao _tipoNotificacao = TipoNotificacao.NENHUM;
 
-  /* 
-  Alteração para tornar o parâmetro de notificação Opcional
-   */
+  // Alteração para tornar o parâmetro de notificação Opcional
   ModelPerson(String nome, String telefone, String email, String nomeRua,
       String numero, String bairro, String cep, Estados estados,
       {token = "", TipoNotificacao tipoNotificacao = TipoNotificacao.NENHUM}) {

@@ -1,11 +1,9 @@
-/* 
-Implementando a interface de notificação através das classes:
-SendNofiticationSMS
-SendNofiticationEmail
-SendNofiticationPush
-
-Apenas mostrando na tela. Não há contratação de serviços mensageiros de notificação.
- */
+// Implementando a interface de notificação através das classes:
+// SendNofiticationSMS
+// SendNofiticationEmail
+// SendNofiticationPush
+//
+// Apenas mostrando na tela. Não há contratação de serviços mensageiros de notificação.
 import 'package:myapp_object_orientation/classes/models/abstract_person_class.dart';
 import 'package:myapp_object_orientation/classes/models/notification.dart';
 import 'package:myapp_object_orientation/enums/notification_method.dart';
